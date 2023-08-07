@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+  <title>Marker based AR Portfolio</title>
+
+  <!-- Import A-Frame and then AR.js -->
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+
+  
+</head>
+
+<body style="margin : 0px; overflow: hidden;">
+  
+  <a-scene  vr-mode-ui="enabled: false;" embedded arjs="sourceType: webcam; 
+  sourceWidth:1280; sourceHeight:960; 
+  displayWidth: 1280; displayHeight: 960; 
+  debugUIEnabled: false;">
+  
+  <!-- A-frame scene -->
+  <a-assets>
+    <img id="aeroplane" src="VR-AR-ProjectCards/2.png"/>
+    <img id="iceCream" src="VR-AR-ProjectCards/6.png"/>
+    <img id="navigation" src="VR-AR-ProjectCards/5.png"/>
+    <img id="eiffelTower" src="VR-AR-ProjectCards/3.png"/>
+    <img id="shooting" src="VR-AR-ProjectCards/4.png"/>
+  </a-assets>
+  
+  <!--create marker for virtual flight game-->
+  <a-marker type="pattern" url="patternMarker/pattern-icon-01.patt">
+    <a-plane src="#aeroplane" position="0 0 -1" width="2" height="1.5" rotation="-90 0 0"></a-plane>
+  </a-marker>
+
+  <!--create marker for virtual Tour-->
+  <a-marker type="pattern" url="patternMarker/pattern-icon-04.patt">
+    <a-plane src="#eiffelTower" position="0 0 -1" width="2" height="1.5" rotation="-90 0 0"></a-plane>
+  </a-marker>
+
+  <!--create marker for virtual Shooting game-->
+  <a-marker type="pattern" url="patternMarker/pattern-icon-06.patt">
+    <a-plane src="#shooting" position="0 0 -1" width="2" height="1.5" rotation="-90 0 0" ></a-plane>
+  </a-marker>
+
+  <!--create marker for AR Menu card-->
+  <a-marker type="pattern" url="patternMarker/pattern-icon-02.patt">
+    <a-plane src="#iceCream" position="0 0 -1" width="2" height="1.5" rotation="-90 0 0"></a-plane>
+  </a-marker>
+
+  <!--create marker for AR Navigation-->
+  <a-marker type="pattern" url="patternMarker/pattern-icon-03.patt">
+    <a-plane src="#navigation" position="0 0 -1" width="2" height="1.5" rotation="-90 0 0"></a-plane>
+  </a-marker>
+
+
+</a-scene> 
+ 
+</body>
+
+</html>
